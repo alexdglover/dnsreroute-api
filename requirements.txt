@@ -1,0 +1,6 @@
+flask
+jwt
+flask-cors
+pymongo
+stripe
+request
