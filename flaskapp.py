@@ -87,7 +87,7 @@ def connect():
 # the Mongo DB Database (underlined in red in the screenshots)
 # Obviously, do not store your password as plaintext in practice
     connection = MongoClient(os.environ['OPENSHIFT_MONGODB_DB_URL'],int(os.environ['OPENSHIFT_MONGODB_DB_PORT']))
-    handle = connection["dnsreroutedev"]
+    handle = connection["dnsreroute"]
     handle.authenticate(os.environ['OPENSHIFT_MONGODB_DB_USERNAME'],os.environ['OPENSHIFT_MONGODB_DB_PASSWORD'])
     return handle
 
