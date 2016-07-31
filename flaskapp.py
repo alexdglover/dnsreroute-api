@@ -8,7 +8,6 @@ import requests
 import base64
 from functools import wraps
 from werkzeug.local import LocalProxy
-from dotenv import Dotenv
 from flask.ext.cors import CORS, cross_origin
 import pymongo
 from pymongo import MongoClient, IndexModel, ASCENDING, DESCENDING, errors
