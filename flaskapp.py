@@ -598,7 +598,7 @@ def isAuthorized(actorEmail, action, target=None):
             print 'User is trying to delete a route that is NOT owned by their org, requesting user is NOT authorized to delete target route'
             return False
     elif action == 'deleteOrg':
-        targetOrg = handle.orgs.find_one({"incomingRoute": target})
+        targetOrg = handle.orgs.find_one({"_id": ObjectId(target)})
         if org['_id'] == targetOrg['_id']:
             print 'User is trying to delete their own org, requesting user is authorized to delete target org'
             return True
